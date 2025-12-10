@@ -1,11 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+     
+    justify-content: space-between;
+    background: linear-gradient(180deg, white, darkgray);
 }
 
-html, body {
-    width: 100%;
-    min-height: 100%;
+section{
+    min-height: 100vh;
+    padding: 80px 20px;
 }
