@@ -1,1 +1,21 @@
-<p>projects works!</p>
+<div class="projects-container">
+    <div class="project-card" (click)="openProject(1)">
+        <!-- <img scr="assets/project1_thumb.png" alt="Sentiment Tracker" -->
+        <h3>Real-Time Sentiment Tracker (In progress)</h3>
+        <p>Live social media NLP analysis with BERT & VADER.</p>
+        <span class="badge">Python</span>
+        <span class="badge">BERT NLP</span>
+        <span class="badge">Streamlit</span>
+    </div>
+</div>
+
+<div class="modal" *ngIf="selectedProject" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <!-- <img [src]="selectedProject.image" class="modal-img> "-->
+        <h2>{{selectedProject.title}}</h2>
+        <p>{{selectedProject.description}}</p>
+        <div class="badges">
+            <span class="badge" *ngFor="let tech of selectedPRoject.tech">{{tech}}</span>
+        </div>
+    </div>
+</div>
