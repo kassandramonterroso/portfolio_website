@@ -1,1 +1,41 @@
-<p>contact works!</p>
+<div class="contact-wrapper">
+    <div class="contact-card">
+        <h2>Let's Work Together</h2>
+        <p>Have a question, opportunity, or want to collaborate? Send me a message!</p>
+
+        <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+            <input type="text"
+                   name="name"
+                   ngModel
+                   required placeholder="Your Name">
+
+            <input type="email"
+                   name="email"
+                   ngModel
+                   required placeholder="Your Email">
+            
+            <textarea name="Message"
+                      ngModel
+                      required placeholder="Your Message"
+                      rows="4"></textarea>
+            
+            <button type="submit" [disabled]="contactForm.valid">
+                Send Message
+            </button>
+
+        </form>
+        <div class="socials">
+            <a href="mailto:kmntrrs@gmail.com" title="Email">📧</a>
+            <a href="https://www.linkedin.com/in/kassandramonterroso" target="_blank" title="LinkedIn">💼</a>
+            <a href="https://github.com/kassandramonterroso" target="_blank" title="GitHub">🐙</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal" *ngIf="submitted" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <h2>Message Sent! 🎉</h2>
+        <p>Thank you for reaching out — I'll get back to you shortly 🙂</p>
+        <button (click)="closeModal()">Close</button>
+    </div>
+</div>

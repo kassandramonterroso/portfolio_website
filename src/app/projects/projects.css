@@ -9,6 +9,7 @@
 
 .project-card {
     background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
     border-radius: 16px;
     padding: 20px;
     text-align: center;
