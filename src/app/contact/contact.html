@@ -3,23 +3,23 @@
         <h2>Let's Work Together</h2>
         <p>Have a question, opportunity, or want to collaborate? Send me a message!</p>
 
-        <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+        <form (ngSubmit)="sendEmail()" #contactForm="ngForm">
             <input type="text"
                    name="name"
-                   ngModel
+                   [(ngModel)]="formData.name"
                    required placeholder="Your Name">
 
             <input type="email"
                    name="email"
-                   ngModel
+                   [(ngModel)]="formData.email"
                    required placeholder="Your Email">
             
-            <textarea name="Message"
-                      ngModel
-                      required placeholder="Your Message"
-                      rows="4"></textarea>
+            <textarea name="message"
+                    [(ngModel)]="formData.message"
+                    required placeholder="Your Message"
+                    rows="4"></textarea>
             
-            <button type="submit" [disabled]="contactForm.valid">
+            <button type="submit" [disabled]="!contactForm.valid">
                 Send Message
             </button>
 
