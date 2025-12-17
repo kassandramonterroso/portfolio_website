@@ -23,7 +23,8 @@ import { Skills } from '../skills/skills';
   styleUrls: ['./home.css']
 })
 export class HomeComponent implements AfterViewInit {
-  @ViewChild('hero') hero!: ElementRef;
+  @ViewChild('hero', {static: true}) hero!: ElementRef;
+  @ViewChild('scroll', {static: true}) scroll!: ElementRef;
 
   name='KASSANDRA';
   letters = this.name.split('');
@@ -34,12 +35,20 @@ export class HomeComponent implements AfterViewInit {
     const observer = new IntersectionObserver(
       ([entry]) => {
         this.app.showFooterName = !entry.isIntersecting;
+        
+        if (!entry.isIntersecting){
+          this.scroll.nativeElement.classList.remove('visible');
+        }
       },
       {
         threshold: 0.1
       }
     );
     observer.observe(this.hero.nativeElement);
+
+    setTimeout(() => {
+      this.scroll.nativeElement.classList.add('visible');
+    }, 2000);
   }
 }
 

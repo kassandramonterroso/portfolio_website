@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .hero-name {
@@ -17,12 +18,37 @@
   animation: letterIn 0.6s ease forwards;
 }
 
+.scroll-text {
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  transform: translate(-50%, 20px);
+
+  width: max-content;
+  text-align: center;
+  padding: 12px 0;
+  color: black;
+  letter-spacing: 0.15em;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.9s ease;
+  pointer-events: none;
+}
+
+.scroll-text.visible {
+  opacity: 0.6;
+  transform: translateY(0);
+}
+
+
 @keyframes letterIn {
   to {
-    opacity: 1;
+    opacity: 0.7;
     transform: translateY(0);
   }
 }
+
 
 .content {
   padding: 80px 20px;
