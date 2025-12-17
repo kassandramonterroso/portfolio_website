@@ -1,21 +1,25 @@
 <div class="projects-container">
-    <div class="project-card" (click)="openProject(1)">
-        <!-- <img scr="assets/project1_thumb.png" alt="Sentiment Tracker" -->
-        <h3>Real-Time Sentiment Tracker (In progress)</h3>
-        <p>Live social media NLP analysis with BERT & VADER.</p>
-        <span class="badge">Python</span>
-        <span class="badge">BERT NLP</span>
-        <span class="badge">Streamlit</span>
+    <h1>Selected Projects</h1>
+    <div class="project-card" 
+        *ngFor="let project of projects | keyvalue" (click)="openProject(project)">
+            <h3>{{ project.value.title }}</h3>
+            <ul>
+                <li *ngFor="let t of project.value.tech">{{ t }}</li>
+            </ul>
     </div>
 </div>
 
-<div class="modal" *ngIf="selectedProject" (click)="closeModal()">
-    <div class="modal-content" (click)="$event.stopPropagation()">
-        <!-- <img [src]="selectedProject.image" class="modal-img> "-->
-        <h2>{{selectedProject.title}}</h2>
-        <p>{{selectedProject.description}}</p>
-        <div class="badges">
-            <span class="badge" *ngFor="let tech of selectedProject.tech">{{tech}}</span>
-        </div>
+<div class="modal-backdrop" *ngIf="selectedProject">
+    <div class="modal">
+        <button class="close" (click)="closeProject()">close</button>
+
+        <h2>{{ selectedProject.value.title }}</h2>
+        <p>{{ selectedProject.value.description }}</p>
+     
+        <a
+        class="github-button"
+        [href]="selectedProject.value.github"
+        target="_blank"
+        rel="noopener">View Code on Github</a>
     </div>
 </div>
