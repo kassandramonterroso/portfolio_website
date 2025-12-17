@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero" #hero>
   <h1 class="hero-name">
     @for (letter of letters; track $index) {
       <span
@@ -10,6 +10,7 @@
   </h1>
 </section>
 
-<section class="content">
-  <p>Content goes here</p>
-</section>
+<app-about></app-about>
+<app-projects></app-projects>
+<app-skills></app-skills>
+<app-contact></app-contact>

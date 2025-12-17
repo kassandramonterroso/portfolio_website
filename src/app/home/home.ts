@@ -1,18 +1,28 @@
 import {
   Component,
   ElementRef,
-  HostListener,
+  AfterViewInit,
   ViewChild
 } from '@angular/core';
 import { AppComponent } from '../app';
+import { About } from '../about/about';
+import { Contact } from '../contact/contact';
+import { Projects } from '../projects/projects';
+import { Skills } from '../skills/skills';
 
 @Component({
   selector: 'app-home',
   standalone: true,
+  imports: [
+    About,
+    Skills,
+    Contact,
+    Projects
+  ],
   templateUrl: './home.html',
   styleUrls: ['./home.css']
 })
-export class HomeComponent {
+export class HomeComponent implements AfterViewInit {
   @ViewChild('hero') hero!: ElementRef;
 
   name='KASSANDRA';
@@ -20,12 +30,16 @@ export class HomeComponent {
 
   constructor(private app: AppComponent) {}
 
-  @HostListener('window:scroll')
-  onScroll() {
-    const heroBottom =
-      this.hero.nativeElement.getBoundingClientRect().bottom;
-
-    this.app.showFooterName = heroBottom <= 0;
+  ngAfterViewInit(){
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        this.app.showFooterName = !entry.isIntersecting;
+      },
+      {
+        threshold: 0.1
+      }
+    );
+    observer.observe(this.hero.nativeElement);
   }
 }
 

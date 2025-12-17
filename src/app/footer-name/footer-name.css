@@ -1,20 +1,27 @@
 .name-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 12px 0;
-    font-size: 2rem;
-    font-weight: bolder;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    pointer-events: none;
-    color: rgba(21, 14, 14, 0.514);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+
+  pointer-events: none;
+}
+
+.name-footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .name-footer {
+    transition: none;
+    transform: none;
   }
-  
-  .name-footer.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
+}

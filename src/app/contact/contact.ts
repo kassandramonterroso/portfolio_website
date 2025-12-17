@@ -5,6 +5,7 @@ import emailjs from 'emailjs-com';
 
 @Component({
   selector: 'app-contact',
+  standalone: true,
   imports: [CommonModule,FormsModule],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
