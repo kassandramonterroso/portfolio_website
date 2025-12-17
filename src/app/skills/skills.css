@@ -47,7 +47,8 @@
 .skill-pill {
     padding: 4px 10px;
     border-radius: 12px;
-    background: rgba(0,0,0,0.6);
+    background: darkslateblue;
+    opacity: 0.8;
     font-size: 0.9rem;
     color: white;
     display: inline-flex;

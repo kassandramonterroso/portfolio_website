@@ -3,7 +3,8 @@
     grid-template-columns: repeat(autofit, minmax(280px, 1fr));
     gap: 30px;
     padding: 20px;
-    max-width: 1100px;
+    justify-content: center;
+    width: auto;
 }
 
 .projects-container h1 {
@@ -16,6 +17,7 @@
     backdrop-filter: blur(10px);
     border-radius: 16px;
     padding: 20px;
+    max-width:1100px;
     text-align: center;
     cursor: pointer;
     transform: transform 0.25s, box-shadow 0.25s;
@@ -28,7 +30,8 @@
 
 .project-card li {
     display: inline-block;
-    background: rgba(0,0,0,0.6);
+    background: darkslateblue;
+    opacity: 0.8;
     color: white;
     padding: 4px 10px;
     border-radius: 12px;
@@ -74,8 +77,8 @@
   
   .github-btn {
     display: inline-block;
+    color: darkslateblue;
     margin-top: 30px;
     text-decoration: none;
     font-weight: 500;
-
   }

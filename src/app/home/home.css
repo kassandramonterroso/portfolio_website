@@ -3,19 +3,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position:relative;
 }
 
 .hero-name {
   font-size: clamp(4rem, 12vw, 10rem);
   letter-spacing: 0.15em;
+  color: black;
 }
 
 .letter {
   display: inline-block;
-  opacity: 0;
+  opacity: 0.6;
   transform: translateY(40px);
-  animation: letterIn 0.6s ease forwards;
+  animation: letterIn 0.7s ease forwards;
 }
 
 .scroll-text {
