@@ -9,12 +9,12 @@
 .hero-name {
   font-size: clamp(4rem, 12vw, 10rem);
   letter-spacing: 0.15em;
-  color: black;
 }
 
 .letter {
   display: inline-block;
-  opacity: 0.6;
+  opacity: 0.7;
+  color: darkslateblue;
   transform: translateY(40px);
   animation: letterIn 0.7s ease forwards;
 }
@@ -47,6 +47,7 @@
   to {
     opacity: 0.85;
     transform: translateY(0);
+    color: black;
   }
 }
 

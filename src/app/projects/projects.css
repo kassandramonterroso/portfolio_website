@@ -30,13 +30,17 @@
 
 .project-card li {
     display: inline-block;
-    background: darkslateblue;
+    background: rgba(0,0,0,0.7);
     opacity: 0.8;
     color: white;
     padding: 4px 10px;
     border-radius: 12px;
     margin: 5px;
     font-size: 0.8rem;
+}
+
+.project-card li:hover {
+    background-color: darkslateblue;
 }
 
 .modal-backdrop {

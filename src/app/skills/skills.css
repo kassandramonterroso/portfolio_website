@@ -47,7 +47,7 @@
 .skill-pill {
     padding: 4px 10px;
     border-radius: 12px;
-    background: darkslateblue;
+    background: rgba(0,0,0,0.7);
     opacity: 0.8;
     font-size: 0.9rem;
     color: white;
@@ -56,7 +56,7 @@
 }
 
 .skill-pill:hover {
-    background: rgba(0,0,0,0.8);
+    background: darkslateblue;
     transform: translateY(-2px);
     transition: 0.2 ease;
 }
