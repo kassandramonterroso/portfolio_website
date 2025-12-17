@@ -1,6 +1,15 @@
-<section class = "home">
-    <footer class = "footer-name">
-        <h1>KASSANDRA MONTERROSO</h1>
-    </footer>
+<section class="hero">
+  <h1 class="hero-name">
+    @for (letter of letters; track $index) {
+      <span
+        class="letter"
+        [style.animationDelay.ms]="$index * 80">
+        {{ letter === ' ' ? '\u00A0' : letter }}
+      </span>
+    }
+  </h1>
 </section>
 
+<section class="content">
+  <p>Content goes here</p>
+</section>

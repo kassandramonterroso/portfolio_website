@@ -1,18 +1,31 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  ViewChild
+} from '@angular/core';
+import { AppComponent } from '../app';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
   templateUrl: './home.html',
-  styleUrl: './home.css',
+  styleUrls: ['./home.css']
 })
-export class Home {
-  
-  constructor(private router: Router){}
+export class HomeComponent {
+  @ViewChild('hero') hero!: ElementRef;
 
-  goToContact(){
-    this.router.navigate(['/contact'])
+  name='KASSANDRA';
+  letters = this.name.split('');
+
+  constructor(private app: AppComponent) {}
+
+  @HostListener('window:scroll')
+  onScroll() {
+    const heroBottom =
+      this.hero.nativeElement.getBoundingClientRect().bottom;
+
+    this.app.showFooterName = heroBottom <= 0;
   }
-
 }
+

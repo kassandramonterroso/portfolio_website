@@ -1,25 +1,17 @@
-import { Component, signal } from '@angular/core';
-import { Home } from './home/home';
-import { About } from './about/about';
-import { Contact } from './contact/contact';
-import { Skills } from './skills/skills';
-import { Projects } from './projects/projects';
-
-import { routes } from './app.routes'; 
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { FooterName } from './footer-name/footer-name';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    Home,
-    About,
-    Contact,
-    Skills,
-    Projects
+    RouterOutlet,
+    FooterName
   ],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
-export class App {
-
+export class AppComponent {
+  showFooterName = false;
 }

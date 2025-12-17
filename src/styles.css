@@ -1,13 +1,6 @@
-html {
-    scroll-behavior: smooth;
-    display: flex;
-    flex-direction: column;
-     
-    justify-content: space-between;
-    background: linear-gradient(180deg, white, darkgray);
-}
-
-section{
-    min-height: 100vh;
-    padding: 80px 20px;
-}
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+  }
+ 
