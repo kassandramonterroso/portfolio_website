@@ -21,19 +21,19 @@ export class Projects {
     },
     3: {
       title: 'Website Data Analysis',
-      description: 'Processing and visualizing large datasets, uncovering patterns that inform design and engagment strategies.',
+      description: 'Conducted user funnel analysis using Pandas to understand how users progress from visiting the website to adding items to cart, checking out, and completing purchases.',
       tech: ['Python', 'Pandas'],
       github:"https://github.com/kassandramonterroso/Website_Data_Analysis",
     },
     4: {
       title: 'Linear Regression Model',
-      description: 'Tuned features to achieve accurate predictive insights.',
+      description: 'Built a gradient descent algorithm to minimize error between predicted and actual values by computing gradients for model parameters and tuning step size for stable convergence.',
       tech: ['Python', 'Matplotlib'],
       github:"https://github.com/kassandramonterroso/Linear_Regression_Algorithm",
     },
     2: {
       title: 'Healthcare ML Model',
-      description: 'KNN breast cancer classifier and diabetes diagnosis analysis; applied ML to generate actionable insights.',
+      description: 'Using sklearn to create a k nearest neighbor classifier trained to predict whether a patient has breast cancer. Includes a plot of classifier accuracies with k values from 1-100 to find the most accurate k value.',
       tech: ['Python', 'Sklearn', 'Matplotlib'],
       github:"https://github.com/kassandramonterroso/Breast_Cancer_Classifier",
     }
