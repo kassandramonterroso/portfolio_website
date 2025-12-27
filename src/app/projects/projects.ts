@@ -14,24 +14,30 @@ export class Projects {
 
   projects: {[key: number] : any} = {
     1: {
+      title: 'Smart Runplanner (In progress)',
+      description: 'Designing a smart training planner that generates personalized running schedules based on availability, pace goals, and recovery constraints. Currently building the data model, scheduling logic, and backend APIs, with plans for analytics-driven progression and performance tracking.',
+      tech: ['Java', 'Spring Boot', 'REST APIs', 'JPA/Hibernate', 'H2'],
+      github: "https://github.com/kassandramonterroso/Smart_Runplanner"
+    },
+    2: {
       title: 'Interactive Developer Portfolio',
       description: 'Designed and built a performant Angular single-page portfolio featuring sequential hero typography animations, scroll-driven UI state, and modular standalone components. Focused on clean architecture, accessibility, and polished user experience.',
       tech: ['Angular', 'TypeScript', 'HTML', 'CSS', 'IntersectionObserver', 'Responsive Design'],
       github: "https://github.com/kassandramonterroso/portfolio_website"
     },
-    3: {
+    4: {
       title: 'Website Data Analysis',
       description: 'Conducted user funnel analysis using Pandas to understand how users progress from visiting the website to adding items to cart, checking out, and completing purchases.',
       tech: ['Python', 'Pandas'],
       github:"https://github.com/kassandramonterroso/Website_Data_Analysis",
     },
-    4: {
+    5: {
       title: 'Linear Regression Model',
       description: 'Built a gradient descent algorithm to minimize error between predicted and actual values by computing gradients for model parameters and tuning step size for stable convergence.',
       tech: ['Python', 'Matplotlib'],
       github:"https://github.com/kassandramonterroso/Linear_Regression_Algorithm",
     },
-    2: {
+    3: {
       title: 'Healthcare ML Model',
       description: 'Using sklearn to create a k nearest neighbor classifier trained to predict whether a patient has breast cancer. Includes a plot of classifier accuracies with k values from 1-100 to find the most accurate k value.',
       tech: ['Python', 'Sklearn', 'Matplotlib'],
