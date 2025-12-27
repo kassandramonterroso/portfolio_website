@@ -15,7 +15,7 @@ export class Projects {
   projects: {[key: number] : any} = {
     1: {
       title: 'Smart Runplanner (In progress)',
-      description: 'Designing a smart training planner that generates personalized running schedules based on availability, pace goals, and recovery constraints. Currently building the data model, scheduling logic, and backend APIs, with plans for analytics-driven progression and performance tracking.',
+      description: 'Designing a smart training planner that generates personalized running schedules based on availability, pace goals, and recovery constraints. Currently building the backend data model and REST APIs to support dynamic scheduling logic, with plans to incorporate analytics-driven progression and performance tracking.',
       tech: ['Java', 'Spring Boot', 'REST APIs', 'JPA/Hibernate', 'H2'],
       github: "https://github.com/kassandramonterroso/Smart_Runplanner"
     },
