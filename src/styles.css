@@ -10,4 +10,8 @@ html {
   background-color: darkgray;
 }
 
+html{
+  --accent: indigo;
+  --accent-soft: rgba(76, 0, 130, 0.492);
+}
 

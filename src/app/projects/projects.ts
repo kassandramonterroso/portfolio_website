@@ -9,6 +9,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './projects.css',
 })
 export class Projects {
+
+  openIndex: number | null = null;
+
+  toggleProject(i: number) {
+  this.openIndex = this.openIndex === i ? null : i;
+  }
+
   
   selectedProject: any = null;
 
@@ -44,13 +51,5 @@ export class Projects {
       github:"https://github.com/kassandramonterroso/Breast_Cancer_Classifier",
     }
   };
-
-  openProject(project: any){
-    this.selectedProject = project;
-  }
-
-  closeProject(){
-    this.selectedProject = null;
-  }
 
 }

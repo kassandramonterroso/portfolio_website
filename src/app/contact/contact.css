@@ -116,7 +116,7 @@ input::placeholder, textarea::placeholder {
 }
 
 button {
-    background: darkslateblue;
+    background: slateblue;
     margin-top: 1rem;
     margin-bottom: 1rem;
     padding: 1rem;

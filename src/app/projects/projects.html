@@ -1,25 +1,41 @@
-<h1>Work that reflects an interest in both how software functions and how it feels to use</h1>
-<div class="projects-container">
-    <div class="project-card" 
-        *ngFor="let project of projects | keyvalue" (click)="openProject(project)">
-            <h3>{{ project.value.title }}</h3>
-            <ul>
-                <li *ngFor="let t of project.value.tech">{{ t }}</li>
-            </ul>
-    </div>
-</div>
-
-<div class="modal-backdrop" *ngIf="selectedProject">
-    <div class="modal">
-        <button class="close" (click)="closeProject()">close</button>
-
-        <h2>{{ selectedProject.value.title }}</h2>
-        <p>{{ selectedProject.value.description }}</p>
-     
+<h1>
+    Work that reflects an interest in both how software functions and how it feels to use
+  </h1>
+  
+  <div class="projects-container">
+    <div
+      class="project-row"
+      *ngFor="let project of projects | keyvalue; let i = index"
+      (click)="toggleProject(i)"
+      [class.open]="openIndex === i"
+    >
+      <div class="row-header">
+        <span class="index">
+          {{ i + 1 | number:'2.0' }}
+        </span>
+  
+        <div class="title-stack">
+          <h3>{{ project.value.title }}</h3>
+          <ul class="tech-list">
+            <li *ngFor="let t of project.value.tech">{{ t }}</li>
+          </ul>
+        </div>
+  
+        <span class="arrow">›</span>
+      </div>
+  
+      <div class="row-content">
+        <p>{{ project.value.description }}</p>
+  
         <a
-        class="github-button"
-        [href]="selectedProject.value.github"
-        target="_blank"
-        rel="noopener">View Code on Github</a>
+          class="github-button"
+          [href]="project.value.github"
+          target="_blank"
+          rel="noopener"
+        >
+          View Code on GitHub →
+        </a>
+      </div>
     </div>
-</div>
+  </div>
+  

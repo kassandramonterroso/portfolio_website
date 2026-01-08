@@ -14,9 +14,9 @@
 .letter {
   display: inline-block;
   opacity: 0.7;
-  color: darkslateblue;
+  color: indigo;
   transform: translateY(40px);
-  animation: letterIn 0.7s ease forwards;
+  animation: letterIn 1s ease forwards;
 }
 
 .scroll-text {
