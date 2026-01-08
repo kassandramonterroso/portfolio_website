@@ -11,7 +11,7 @@
     opacity: 0.8;
     letter-spacing: 0.02em;
     color: #111;
-
+    backdrop-filter: blur(4px);
     max-width: 680px;
     margin: 0 auto 48px;
     text-align: center;

@@ -2,15 +2,23 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import emailjs from 'emailjs-com';
+import {LucideAngularModule, Mail, Github, Linkedin, MapPin, Send} from 'lucide-angular';
+
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule, LucideAngularModule],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
 export class Contact {
+
+  readonly Mail = Mail;
+  readonly GitHub = Github;
+  readonly LinkedIn = Linkedin;
+  readonly mapPin = MapPin;
+  readonly Send = Send;
 
   submitted=false;
 

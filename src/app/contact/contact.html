@@ -1,33 +1,65 @@
-<div class="contact-wrapper">
-    <div class="contact-card">
-        <h2>Let's Work Together</h2>
-        <p>Have a question, opportunity, or want to collaborate? Send me a message!</p>
+<div class="contact-header">
+    <h2>Let's Work Together</h2>
+    <p>Have a project in mind? Let's discuss how we can bring your ideas to life.</p>
+</div>
 
+<div class="contact-wrapper">
+    <div class="contact-left">
+        <h2>Get in Touch</h2>
+        <p class="description">
+            I'm always open to discussing new projects, creative ideas, or opportunities to be
+            part of your vision. Feel free to reach out!
+        </p>
+        <div class="contact-item">
+            <lucide-icon [name]="Mail"></lucide-icon>
+            <div>
+                <strong>Email</strong>
+                <p>kmntrrs@gmail.com</p>
+            </div>
+        </div>
+        <div class="contact-item">
+            <lucide-icon [name]="mapPin"></lucide-icon>
+            <div>
+                <strong>Location</strong>
+                <p>Toronto, ON</p>
+            </div>
+        </div>
+     
+    </div>
+    <div class="contact-card">
         <form (ngSubmit)="sendEmail()" #contactForm="ngForm">
+            <h3>Name</h3>
             <input type="text"
                    name="name"
                    [(ngModel)]="formData.name"
                    required placeholder="Your Name">
-
+            <h3>Email</h3>
             <input type="email"
                    name="email"
                    [(ngModel)]="formData.email"
-                   required placeholder="Your Email">
-            
+                   required placeholder="your.email@example.com">
+            <h3>Message</h3>
             <textarea name="message"
                     [(ngModel)]="formData.message"
-                    required placeholder="Your Message"
+                    required placeholder="Your Message..."
                     rows="4"></textarea>
             
             <button type="submit" [disabled]="!contactForm.valid">
-                Send Message
+                Send Message   
+                <lucide-icon [name]="Send"></lucide-icon> 
             </button>
 
         </form>
         <div class="socials">
-            <a href="mailto:kmntrrs@gmail.com" title="Email">📧</a>
-            <a href="https://www.linkedin.com/in/kassandramonterroso" target="_blank" title="LinkedIn">💼</a>
-            <a href="https://github.com/kassandramonterroso" target="_blank" title="GitHub">🐙</a>
+            <a href="mailto:kmntrrs@gmail.com" title="Email">
+                <lucide-icon [name]="Mail"></lucide-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/kassandramonterroso" target="_blank" title="LinkedIn">
+                <lucide-icon [name]="LinkedIn"></lucide-icon>
+            </a>
+            <a href="https://github.com/kassandramonterroso" target="_blank" title="GitHub">
+                <lucide-icon [name]="GitHub"></lucide-icon>
+            </a>
         </div>
     </div>
 </div>
