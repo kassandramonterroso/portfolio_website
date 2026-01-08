@@ -25,19 +25,19 @@ export class Projects {
       tech: ['Angular', 'TypeScript', 'HTML', 'CSS', 'IntersectionObserver', 'Responsive Design'],
       github: "https://github.com/kassandramonterroso/portfolio_website"
     },
-    4: {
+    3: {
       title: 'Website Data Analysis',
       description: 'Conducted user funnel analysis using Pandas to understand how users progress from visiting the website to adding items to cart, checking out, and completing purchases.',
       tech: ['Python', 'Pandas'],
       github:"https://github.com/kassandramonterroso/Website_Data_Analysis",
     },
-    5: {
+    4: {
       title: 'Linear Regression Model',
       description: 'Built a gradient descent algorithm to minimize error between predicted and actual values by computing gradients for model parameters and tuning step size for stable convergence.',
       tech: ['Python', 'Matplotlib'],
       github:"https://github.com/kassandramonterroso/Linear_Regression_Algorithm",
     },
-    3: {
+    5: {
       title: 'Healthcare ML Model',
       description: 'Using sklearn to create a k nearest neighbor classifier trained to predict whether a patient has breast cancer. Includes a plot of classifier accuracies with k values from 1-100 to find the most accurate k value.',
       tech: ['Python', 'Sklearn', 'Matplotlib'],
