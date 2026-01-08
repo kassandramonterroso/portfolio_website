@@ -19,7 +19,7 @@ export class Skills {
   skills = [
     {
       category: 'Frontend',
-      items: ['Angular', 'Typescript', 'HTML', 'CSS']
+      items: ['Angular', 'Typescript', 'HTML', 'CSS', 'React']
     },
     {
       category: 'Backend',
