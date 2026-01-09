@@ -1,6 +1,6 @@
 h1{
   color: #111;
-  opacity: 0.8;
+  opacity: 0.9;
   text-align: center;
 }
 
@@ -23,6 +23,10 @@ h1{
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
+.project-row:hover .index{
+  color:var(--accent);
+}
+
 .row-header {
   display: flex;
   align-items: center;
@@ -38,10 +42,80 @@ h1{
 
 .title-stack h3 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color:#111;
   opacity: 0.8;
 }
+
+.lang-bar{
+  display: flex;
+  height: 3px;
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 0.35rem 0 0.25rem;
+  background: #e5e7eb;
+}
+
+.lang-segment{
+  height: 100%;
+}
+
+.lang-segment.typescript,
+.lang-legend i.typescript {
+  background: #3179c6ca;
+}
+
+.lang-segment.python,
+.lang-legend i.python {
+  background: #3179c6bd;
+}
+
+.lang-segment.javascript,
+.lang-legend i.javascript {
+  background: #f7de1eb8;
+}
+
+.lang-segment.html,
+.lang-legend i.html {
+  background: #e34c26b2;
+}
+
+.lang-segment.css,
+.lang-legend i.css {
+  background: rgba(84, 48, 117, 0.739);
+}
+
+.lang-legend {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.65rem;
+  color: #444;
+  margin-bottom: 0.25rem;
+}
+
+.lang-legend span {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  gap: 6px;
+}
+
+.lang-legend i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.project-row.open .lang-segment {
+  animation: grow 0.6s ease;
+}
+
+@keyframes grow {
+  from { width: 0; }
+}
+
 
 .tech-list {
   margin-top: 0.5rem;
@@ -49,7 +123,8 @@ h1{
 
 .tech-list li {
   display: inline-block;
-  background: #f1f1f1;
+  background: rgba(0, 0, 0, 0.06);
+  color: #111;
   border-radius: 999px;
   padding: 4px 10px;
   font-size: 0.75rem;
@@ -95,8 +170,20 @@ h1{
   display: inline-block;
   margin-top: 0.75rem;
   font-size: 0.9rem;
-  color: #000;
+  font-weight: 300;
+  color: #111;
+  opacity: 0.8;
   text-decoration: none;
+}
+
+.github-button lucide-icon{
+  color: #111;
+  opacity: 0.8;
+  
+}
+
+.github-button:hover lucide-icon{
+  color: var(--accent);
 }
 
 .github-button:hover{

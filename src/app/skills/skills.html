@@ -5,6 +5,7 @@
         <div class="skills-card" 
         *ngFor="let group of skills; let i = index"
         [style.transform]="'translateY(' + getOffset(i) + 'px)'">
+        <lucide-icon [name]="group.icon"></lucide-icon>
             <h3>{{ group.category }}</h3>
             
             <div class="skill-list">

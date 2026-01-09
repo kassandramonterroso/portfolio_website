@@ -16,6 +16,20 @@
   
         <div class="title-stack">
           <h3>{{ project.value.title }}</h3>
+          <div class="lang-bar">
+            <div
+            *ngFor="let lang of project.value.languages | keyvalue"
+            class="lang-segment"
+            [style.width.%]="lang.value"
+            [class]="getLangClass(lang.key)"
+            ></div>
+          </div>
+          <div class="lang-legend">
+            <span *ngFor="let lang of project.value.languages | keyvalue">
+              <i [class]="getLangClass(lang.key)"></i>
+              {{ lang.key }} {{ lang.value }}%
+            </span>
+          </div>
           <ul class="tech-list">
             <li *ngFor="let t of project.value.tech">{{ t }}</li>
           </ul>
@@ -34,6 +48,7 @@
           rel="noopener"
         >
           View Code on GitHub →
+          <lucide-icon [name]="GitHub"></lucide-icon>
         </a>
       </div>
     </div>
