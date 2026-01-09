@@ -25,23 +25,23 @@ export class Skills {
   skills = [
     {
       icon: PanelsTopLeft,
-      category: 'Frontend',
-      items: ['Angular', 'Typescript', 'HTML', 'CSS', 'React']
+      category: 'Frontend Development',
+      items: ['Angular', 'Typescript','JavaScript', 'HTML', 'CSS', 'React']
     },
     {
       icon: Server,
-      category: 'Backend',
+      category: 'Backend Development',
       items: ['Python', 'Java', 'SpringBoot', 'REST APIs']
     },
     {
       icon: Database,
-      category: 'Databases',
-      items: ['PostgreSQL', 'SQL']
+      category: 'Databases & Storage',
+      items: ['H2','PostgreSQL', 'SQL']
     },
     {
       icon: CodeXml,
       category: 'Cloud & DevOps',
-      items: ['Docker', 'Git', 'CI/CD', 'AWS']
+      items: ['Docker', 'Git', 'CI/CD', 'AWS','Firebase']
     }
   ];
 

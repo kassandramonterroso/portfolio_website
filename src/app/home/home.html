@@ -1,18 +1,12 @@
-<section class="hero" #hero>
-  <h1 class="hero-name">
-    @for (letter of letters; track $index) {
-      <span
-        class="letter"
-        [style.animationDelay.ms]="$index * 80">
-        {{ letter === ' ' ? '\u00A0' : letter }}
-      </span>
-    }
+<section class="hero">
+  <h1 class="hero-text">
+    <span class="hi">Hi</span>
+    <span class="name">I'm Kassandra</span>
   </h1>
 
-  <div class="scroll-text" #scroll>
+  <div class="scroll-text">
     scroll
   </div>
-
 </section>
 
 <app-about></app-about>
