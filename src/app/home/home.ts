@@ -15,12 +15,10 @@ export class HomeComponent implements OnInit {
   stage: 'none' | 'hi' | 'name' = 'none';
 
   ngOnInit() {
-    // show "Hi"
     setTimeout(() => {
       this.stage = 'hi';
     }, 100);
 
-    // switch to name
     setTimeout(() => {
       this.stage = 'name';
     }, 1500);
