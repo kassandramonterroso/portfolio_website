@@ -1,6 +1,26 @@
 <div class="about-wrapper">
+    <div class="about-grid">
+        <div class="about-left">
+            <img
+                src="assets/charlie.jpg"
+                alt="kassandra"
+                class="profile-img"
+            />
+            <div class="pill-cards">
+                <div class="pill-card">
+                    <h1>Agile</h1>
+                    <p>Methodology</p>
+                </div>
+                <div class="pill-card">
+                    <h1>Clean</h1>
+                    <p>Code Quality</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="about-box">
-        <h2>Building thoughtful, well-structured software, and caring deeply about how people learn and use it.</h2>
+        <h2>Building <strong>thoughtful</strong>, well-structured software, and caring deeply about how people learn and use it.</h2>
         <p>
             Bilingual full-stack developer and technical instructor with hands-on experience across Python, Java, Angular, and PostgreSQL. I enjoy working at the intersection of backend engineering, teaching, and mentorship, bringing structure and clarity to complex problems.
         </p>
@@ -8,4 +28,28 @@
             With a background in philosophy and experience in Agile environments, I value clean code, strong communication, and curiosity-driven learning.
         </p>
     </div>   
+
+    <div class="about-features">
+        <div class="feature-card">
+            <lucide-icon [name]="CodeXml"></lucide-icon>
+            <h4>Full Stack Developer</h4>
+            <p>Python Java Angular PostgreSQL</p>
+          </div>
+          <div class="feature-card">
+            <lucide-icon [name]="GraduationCap"></lucide-icon>
+            <h4>Technical Instructor</h4>
+            <p>Teaching & mentorship</p>
+          </div>
+          <div class="feature-card">
+            <lucide-icon [name]="Languages"></lucide-icon>
+            <h4>Bilingual</h4>
+            <p>Bridging communication</p>
+          </div>
+          <div class="feature-card">
+            <lucide-icon [name]="Brain"></lucide-icon>
+            <h4>Philosophy Background</h4>
+            <p>Critical thinking & structure</p>
+          </div>
+    </div>
+
 </div>

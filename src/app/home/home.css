@@ -47,8 +47,8 @@
 .scroll-text {
   position: absolute;
   left: 50%;
-  bottom: 20px;
-  transform: translateX(-50%) translateY(10px);
+  bottom: 40px;
+  transform: translateX(-50%);
   font-size: 0.75rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -56,6 +56,10 @@
   animation: scrollFade 1s ease forwards;
   animation-delay: 3.2s;
   pointer-events: none;
+}
+
+.scroll-indicator.hidden{
+  opacity: 0;
 }
 
 @keyframes hiFade {
@@ -72,8 +76,8 @@
 
 @keyframes scrollFade {
   to {
-    opacity: 0.6;
-    transform: translateX(-50%) translateY(0);
+    opacity: 0.65;
+    transform: translateX(-50%);
   }
 }
 

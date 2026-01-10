@@ -26,7 +26,7 @@ export class Skills {
     {
       icon: PanelsTopLeft,
       category: 'Frontend Development',
-      items: ['Angular', 'Typescript','JavaScript', 'HTML', 'CSS', 'React']
+      items: ['Angular', 'Typescript','JavaScript', 'HTML', 'CSS', 'React', 'Figma(UI/UX)']
     },
     {
       icon: Server,

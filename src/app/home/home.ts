@@ -22,5 +22,9 @@ export class HomeComponent implements OnInit {
     setTimeout(() => {
       this.stage = 'name';
     }, 1500);
+
   }
+
 }
+
+

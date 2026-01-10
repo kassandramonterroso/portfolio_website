@@ -1,31 +1,108 @@
+.about-wrapper{
+    padding: 80px 60px;
+}
+
+.about-grid{
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile-img{
+    width: 100%;
+    max-width: 360px;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
 .about-box {
     width: 450px;
     padding: 30px;
-    background: 255,255,255,0.25;
+    background: rgba(255,255,255,0.5);
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.06);
     color: #222;
 }
 
 .about-box h2 {
-    margin-bottom: 10px;
-    font-size: 1.8rem;
-    opacity: 0.8;
-    text-align: center;
-    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    line-height: 1.2;
+}
+
+.about-box strong{
+    color: var(--accent);
 }
 
 .about-box p {
-    line-height: 1.6;
+    line-height: 1.7;
     font-size: 1rem;
+    color: #444;
 }
 
-.about-wrapper {
+.pill-cards {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    min-height: 100vh;
-    padding-left: 20px;
-    padding-right: 80px;
-}
+    gap: 20px;
+  }
+  
+  .pill-card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  }
+  
+  .pill-card h1 {
+    color: indigo;
+    margin-bottom: 6px;
+    font-size: 1.4rem;
+  }
+
+  .pill-card p{
+      opacity: 0.8;
+      font-weight: 300;
+  }
+  
+  .about-features {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  
+  .feature-card {
+    padding: 24px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    text-align: center;
+  }
+
+  .feature-card lucide-icon{
+      color: var(--accent);
+      opacity: 0.8;
+  }
+  
+  .feature-card h4 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+  }
+
+  .feature-card p{
+      opacity: 0.7;
+      font-weight: 300;
+      
+  }
+  

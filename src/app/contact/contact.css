@@ -107,8 +107,8 @@ input, textarea {
     border-width: 1px;
     font-size: 1rem;
     color: #111;
-    opacity: 0.9;
-    outline-color: var(--accent-soft);
+    opacity: 0.5;
+    outline-color: var(--accent);
 }
 
 input::placeholder, textarea::placeholder {
